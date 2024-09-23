@@ -1,6 +1,3 @@
-# Let's create the summary as a .txt file preserving the format.
-
-summary_text = """
 ## Resumen Completo
 
 ### 1. **Modelo OSI (Open Systems Interconnection):**
@@ -21,9 +18,7 @@ summary_text = """
      - **Eficiencia de Transmisión:**
        - Cuando se agregan cabeceras en cada capa del modelo OSI, la eficiencia de transmisión se calcula como la proporción de los datos útiles (payload) en comparación con el total de datos transmitidos (payload + cabeceras).
        - **Fórmula para la eficiencia:**
-         \[
-         \text{Eficiencia} = \frac{\text{Datos útiles}}{\text{Datos útiles} + \text{Cabeceras}}
-         \]
+         Eficiencia = (Datos útiles) / (Datos útiles + Cabeceras)
 
 ### 2. **Conceptos Clave de Red:**
    - **Segmento:** Unidad de datos en la capa de transporte.
@@ -48,88 +43,77 @@ summary_text = """
    - **Tarjetas de Red (NIC):** Implementan las funciones de la capa física y de enlace de datos para gestionar la transmisión y recepción de datos en una red.
 
 ### 6. **Frecuencia y Período:** 
-   - La frecuencia (\( f \)) es el número de ciclos de una señal por segundo, medida en Hertz (Hz).
-   - El período (\( T \)) es el tiempo que toma un ciclo completo de la señal, y se relaciona con la frecuencia por \( T = \frac{1}{f} \).
+   - La frecuencia (f) es el número de ciclos de una señal por segundo, medida en Hertz (Hz).
+   - El período (T) es el tiempo que toma un ciclo completo de la señal, y se relaciona con la frecuencia por T = 1/f.
 
 ### 7. **Señales Electromagnéticas:**
    - Una señal electromagnética puede sufrir atenuación a medida que viaja a través de un medio, lo que resulta en una disminución de la potencia de la señal en el receptor.
    - **Atenuación (en dB):** 
-     \[
-     \text{Atenuación (dB)} = 10 \times \log_{10}\left(\frac{P_{\text{transmitida}}}{P_{\text{recibida}}}\right)
-     \]
+     Atenuación (dB) = 10 * log10(P_transmitida / P_recibida)
 
 ### 8. **Velocidad de Transmisión:**
-   - Se mide en bits por segundo (bps) y se calcula usando la frecuencia de transmisión (en baudios) y el número de elementos de señal (\( V \)):
-     \[
-     \text{Velocidad de transmisión (bps)} = \text{Baudios} \times \log_2(V)
-     \]
+   - Se mide en bits por segundo (bps) y se calcula usando la frecuencia de transmisión (en baudios) y el número de elementos de señal (V):
+     Velocidad de transmisión (bps) = Baudios * log2(V)
 
 ### 9. **Teoremas Clave en Comunicaciones**
 
 - **Teorema de Nyquist:**
   - En un canal sin ruido, la máxima velocidad de transmisión es:
-    \[
-    C = 2 \times B \times \log_2(V)
-    \]
-  - Donde \( B \) es el ancho de banda y \( V \) es el número de niveles de señal distintos.
+    C = 2 * B * log2(V)
+  - Donde B es el ancho de banda y V es el número de niveles de señal distintos.
 
 - **Teorema de Shannon:**
   - La capacidad máxima de un canal con ruido se da por:
-    \[
-    C = B \times \log_2\left(1 + \frac{S}{N}\right)
-    \]
-  - Donde \( \frac{S}{N} \) es la relación señal a ruido.
+    C = B * log2(1 + S/N)
+  - Donde S/N es la relación señal a ruido.
 
 ### 10. **Relación Señal/Ruido (S/N) y Conversión entre dB y Forma Lineal**
 
 - **Conversión de dB a relación lineal:**
-  \[
-  \text{Relación S/N} = 10^{\frac{\text{S/N (dB)}}{10}}
-  \]
-  - Ejemplo: Una relación S/N de 30 dB se convierte a \( \frac{S}{N} = 1000 \).
+  Relación S/N = 10^(S/N (dB)/10)
+  - Ejemplo: Una relación S/N de 30 dB se convierte a S/N = 1000.
 
 - **Cálculo de S/N en dB:**
-  \[
-  \text{Relación S/N (dB)} = 20 \times \log_{10}\left(\frac{A_{\text{señal}}}{A_{\text{ruido}}}\right)
-  \]
+  Relación S/N (dB) = 20 * log10(A_señal / A_ruido)
 
 ### 11. **Cálculo de Potencia y Ancho de Banda**
 
 - **Potencia de Ruido Térmico:**
-  \[
-  P_{\text{ruido}} = kTB
-  \]
-  - Donde \( k \) es la constante de Boltzmann, \( T \) es la temperatura en Kelvin, y \( B \) es el ancho de banda.
+  P_ruido = kTB
+  - Donde k es la constante de Boltzmann, T es la temperatura en Kelvin, y B es el ancho de banda.
   
 - **Potencia de Ruido Térmico en dBm:**
   - La potencia de ruido térmico se puede calcular en dBm utilizando la fórmula:
-    \[
-    P_{\text{ruido}} \, (\text{dBm}) = 10 \times \log_{10}(P_{\text{ruido}} \, (\text{W})) + 30
-    \]
+    P_ruido (dBm) = 10 * log10(P_ruido (W)) + 30
 
 ### 12. **Latencia y RTT (Round Trip Time)**
 
 - **Latencia:** 
   - Es el tiempo que tarda una señal en viajar desde el transmisor al receptor. Para ondas viajando a la velocidad de la luz:
-    \[
-    \text{Latencia} = \frac{\text{Distancia}}{\text{Velocidad de la luz}}
-    \]
+    Latencia = Distancia / Velocidad de la luz
 
 - **RTT (Round Trip Time):**
   - Es el tiempo total para que una señal vaya y vuelva entre dos puntos. Se calcula como el doble de la latencia más los tiempos de transmisión:
-    \[
-    \text{RTT} = 2 \times (\text{Latencia} + \text{Tiempo de transmisión})
-    \]
+    RTT = 2 * (Latencia + Tiempo de transmisión)
 
 ### 13. **Bandwidth-Delay Product (Producto de Ancho de Banda por Retardo):**
 
 - **Definición:**
-  - El producto de la latencia por la velocidad de transmisión es conocido como **Bandwidth-Delay Product**. Representa la cantidad de datos que pueden estar "en tránsito" en un canal en un momento dado.
+  - El producto de la latencia por la velocidad de transmisión es conocido como Bandwidth-Delay Product. Representa la cantidad de datos que pueden estar "en tránsito" en un canal en un momento dado.
   
 - **Cálculo:**
-  \[
-  \text{Producto} = \text{Latencia} \times \text{Velocidad de transmisión}
-  \]
+  Producto = Latencia * Velocidad de transmisión
   
 - **Significado:**
-  - Este valor indica cuántos bits pueden estar "en vuelo" en un enlace de comunicaciones en un momento dado,
+  - Este valor indica cuántos bits pueden estar "en vuelo" en un enlace de comunicaciones en un momento dado, y es crucial para determinar el tamaño óptimo de las ventanas de transmisión en protocolos como TCP.
+
+### 14. **Cálculo de Velocidad de Transmisión en un Canal Telefónico**
+
+- **Canal Telefónico:**
+  - Ancho de banda típico: 4 kHz.
+  - Relación señal/ruido y capacidad calculada usando el Teorema de Shannon.
+
+### 15. **Transmisión de Imágenes y Vídeo**
+
+- **Transmisión de Imágenes:**
+  - Para imágenes de televisión, se necesita calcular la cantidad de datos transmitidos por imagen y la velocidad total de transmisión, considerando el número de puntos por línea, líneas por imagen, niveles de brillo, y la tasa de imágenes por segundo.
