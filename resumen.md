@@ -1,4 +1,7 @@
-## Resumen 
+# Let's create the summary as a .txt file preserving the format.
+
+summary_text = """
+## Resumen Completo
 
 ### 1. **Modelo OSI (Open Systems Interconnection):**
    - **Capas del Modelo OSI:**
@@ -125,23 +128,8 @@
   
 - **Cálculo:**
   \[
-  \text{Producto} = \text{Latencia} \times \text{Velocidad de
-
- transmisión}
+  \text{Producto} = \text{Latencia} \times \text{Velocidad de transmisión}
   \]
   
 - **Significado:**
-  - Este valor indica cuántos bits pueden estar "en vuelo" en un enlace de comunicaciones en un momento dado, y es crucial para determinar el tamaño óptimo de las ventanas de transmisión en protocolos como TCP.
-
-### 14. **Cálculo de Velocidad de Transmisión en un Canal Telefónico**
-
-- **Canal Telefónico:**
-  - Ancho de banda típico: 4 kHz.
-  - Relación señal/ruido y capacidad calculada usando el Teorema de Shannon.
-
-### 15. **Transmisión de Imágenes y Vídeo**
-
-- **Transmisión de Imágenes:**
-  - Para imágenes de televisión, se necesita calcular la cantidad de datos transmitidos por imagen y la velocidad total de transmisión, considerando el número de puntos por línea, líneas por imagen, niveles de brillo, y la tasa de imágenes por segundo.
-
----
+  - Este valor indica cuántos bits pueden estar "en vuelo" en un enlace de comunicaciones en un momento dado,
